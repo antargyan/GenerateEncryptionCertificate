@@ -9,4 +9,4 @@ request.CertificateExtensions.Add(new X509KeyUsageExtension(X509KeyUsageFlags.Di
 
 var certificate = request.CreateSelfSigned(DateTimeOffset.UtcNow, DateTimeOffset.UtcNow.AddYears(12));
 
-File.WriteAllBytes("server-encryption-certificate.pfx", certificate.Export(X509ContentType.Pfx, "EncryptionP@ssw0rd"));
+File.WriteAllBytes("EncryptionCertificate.pfx", certificate.Export(X509ContentType.Pfx, "EncryptionP@ssw0rd"));
